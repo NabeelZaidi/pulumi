@@ -23,7 +23,7 @@ const objectIdvalue = confignative.require("objectId");
 
 // Create an Azure Resource Group
 const resourceGroup = new resources.ResourceGroup("resourceGroup",{
-    resourceGroupName: "testnabeel"
+    resourceGroupName: "testnabeel2"
 });
 
 // Create an Azure resource (Storage Account)
