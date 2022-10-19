@@ -1,6 +1,9 @@
 name: Pulumi
 on:
-  - pull_request
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
 jobs:
   preview:
     name: Preview
