@@ -29,6 +29,10 @@ jobs:
     needs: Pulumi_Preview
     environment: dev
     steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: nabeelzaidi
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
