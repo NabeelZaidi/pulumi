@@ -1,0 +1,17 @@
+config:
+  azure-native:KeyvaultSecretName: testnabuser
+  azure-native:Password: passwordtest
+  azure-native:SqlServerDBName: testnabdb
+  azure-native:SqlServerName: testnabserver
+  azure-native:UserId: testnabuser
+  azure-native:clientId: 5fa61c32-010b-4542-8767-c6acbd123a6b
+  azure-native:clientSecret: q468Q~Z8y7W8DELfYNcLL7gDjQGcZEzUGxWeNaYJ
+  azure-native:location: eastus
+  azure-native:subscriptionId: d3351f58-73df-4a2f-aea8-0713f9554703
+  azure-native:tenantId: a5d49e82-777a-487e-ad33-0a4d36b41b58
+  azure-native:objectId: 61e6a457-e108-4ef3-aba4-3accb20c73a5
+  azure:clientId: 5fa61c32-010b-4542-8767-c6acbd123a6b
+  azure:clientSecret: q468Q~Z8y7W8DELfYNcLL7gDjQGcZEzUGxWeNaYJ
+  azure:subscriptionId: d3351f58-73df-4a2f-aea8-0713f9554703
+  azure:tenantId: a5d49e82-777a-487e-ad33-0a4d36b41b58
+  ls:KeyVaultName: nabeelkey7
