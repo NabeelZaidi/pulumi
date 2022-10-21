@@ -51,6 +51,7 @@ const storageAccount = new storage.StorageAccount("sanab", {
 // //Below Code is for testing purpose
 // // Create App Service Plan
 // const appServicePlan = new web.AppServicePlan("asp", {
+//     name: "testnabeel",
 //     resourceGroupName: resourceGroup.name,
 //     kind: "App",
 //     sku: {
