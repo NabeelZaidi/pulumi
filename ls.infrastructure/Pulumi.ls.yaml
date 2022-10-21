@@ -14,4 +14,4 @@ config:
   azure:clientSecret: q468Q~Z8y7W8DELfYNcLL7gDjQGcZEzUGxWeNaYJ
   azure:subscriptionId: d3351f58-73df-4a2f-aea8-0713f9554703
   azure:tenantId: a5d49e82-777a-487e-ad33-0a4d36b41b58
-  ls:KeyVaultName: nabeelkey7
+  ls:KeyVaultName: nabeelkey9
