@@ -4,6 +4,8 @@ on:
     # Sequence of patterns matched against refs/heads
     branches:    
       - main
+    paths:
+      - 'ls.infrastructure/**'
 jobs:
   preview:
     name: Preview
