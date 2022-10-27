@@ -11,8 +11,7 @@ jobs:
       - uses: CumulusDS/get-yaml-paths-action@v0.1.0
         id: yaml-data
         with:
-          file: ./ls.infrastructure/file.yml
-          bar: foo.bar
-          providerStage: provider.stage
+          file: ./ls.infrastructure/Pulumi.ls.yaml
+          bar: config.azure-native:KeyvaultSecretName
       - name: Display read-yaml output
         run: echo "${{ steps.yaml-data.outputs.bar }}"
