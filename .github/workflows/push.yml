@@ -1,8 +1,7 @@
 name: Pulumi-Deploy
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    
 jobs:
   Pulumi_Preview:
     runs-on: ubuntu-latest
