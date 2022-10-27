@@ -1,0 +1,15 @@
+name: Read-Yaml
+on:
+  workflow_dispatch:
+  
+jobs:
+  Read_yaml:
+    name: get-variable
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: CumulusDS/get-yaml-paths-action@v0.1.0
+        with:
+          file: ./file.yml
+          bar: foo.bar
+          providerStage: provider.stage
