@@ -9,7 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: CumulusDS/get-yaml-paths-action@v0.1.0
+        id: yaml-data
         with:
-          file: ls.infrastructure/file.yml
+          file: ./ls.infrastructure/file.yml
           bar: foo.bar
           providerStage: provider.stage
+      - name: Display read-yaml output
+        run: echo "${{ steps.yaml-data.outputs.bar }}"
