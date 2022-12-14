@@ -18,8 +18,10 @@ jobs:
       with:
         azcliversion: 2.30.0
         inlineScript: |
+          ip=$(curl ipinfo.io/ip)
+          az sql server firewall-rule create -g rg-nabeel --server test-nabeelsql --name ADO-Deploy --start-ip-address $ip --end-ip-address $ip
           az account show
-          az storage -h
+# az storage -h
 
 # jobs:
 #   Read_yaml:
