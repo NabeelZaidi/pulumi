@@ -1,17 +1,36 @@
-name: Read-Yaml
+name: CLIforSQL
 on:
   workflow_dispatch:
-  
+
 jobs:
-  Read_yaml:
-    name: get-variable
+
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: CumulusDS/get-yaml-paths-action@v0.1.0
-        id: yaml-data
-        with:
-          file: ./ls.infrastructure/Pulumi.ls.yaml
-          bar: config.azure-native:KeyvaultSecretName
-      - name: Display read-yaml output
-        run: echo "${{ steps.yaml-data.outputs.bar }}"
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.30.0
+        inlineScript: |
+          az account show
+          az storage -h
+
+# jobs:
+#   Read_yaml:
+#     name: get-variable
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: CumulusDS/get-yaml-paths-action@v0.1.0
+#         id: yaml-data
+#         with:
+#           file: ./ls.infrastructure/Pulumi.ls.yaml
+#           bar: config.azure-native:KeyvaultSecretName
+#       - name: Display read-yaml output
+#         run: echo "${{ steps.yaml-data.outputs.bar }}"
