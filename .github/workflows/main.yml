@@ -21,7 +21,7 @@ jobs:
           ip=$(curl ipinfo.io/ip)
           az sql server firewall-rule create -g rg-nabeel --server test-nabeelsql --name ADO-Deploy --start-ip-address $ip --end-ip-address $ip
           az account show
-          az sql db import --name test-nabeeldb2--server test-nabeelsql --resource-group rg-nabeel --admin-user nabeel.zaidi@opticca.com --admin-password Amity@4492 --storage-key-type StorageAccessKey --storage-key /UgeH40HoDrKuld/kDk6EN0o9vrLhCoVLr+DzZBF30g8XfUNcq6/q0iPxi955DloT3sPNyDczK8x+AStbc1bhg== --storage-uri https://testnabeelstorage.blob.core.windows.net/testbacpac/WideWorldImporters-Standard.bacpac
+          az sql db import --name "test-nabeeldb3" --server "test-nabeelsql" --resource-group "rg-nabeel" --admin-user "nabeel.zaidi@opticca.com" --admin-password "Amity@4492" --storage-key-type "StorageAccessKey" --storage-key "/UgeH40HoDrKuld/kDk6EN0o9vrLhCoVLr+DzZBF30g8XfUNcq6/q0iPxi955DloT3sPNyDczK8x+AStbc1bhg==" --storage-uri "https://testnabeelstorage.blob.core.windows.net/testbacpac/WideWorldImporters-Standard.bacpac"
           az sql server firewall-rule delete -g rg-nabeel --server test-nabeelsql --name ADO-Deploy
 # az storage -h
 
